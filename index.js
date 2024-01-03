@@ -1,7 +1,7 @@
-var a=7
-if(a===undefined){
-    console.log("a is undefined");
+var a = 100;
+{
+    var a = 10;
+    console.log(a);
 }
-else{
-    console.log("a is not undefined");
-}
+console.log(a);
+
