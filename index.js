@@ -95,7 +95,7 @@ var counter1 = counter();
 counter1();
 */
 //.... contructive function
-
+/*
 function Counter(){
     let count = 0;
     this.incrementCounter = function(){
@@ -112,3 +112,10 @@ counter1.incrementCounter();
 counter1.incrementCounter();
 counter1.decrementCounter();
 counter1.decrementCounter();
+*/
+var a = function (parm){
+    return function b(){
+        console.log("hi");
+    }
+}
+console.log(a());
