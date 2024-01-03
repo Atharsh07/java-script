@@ -2,7 +2,11 @@
     margin: 0% auto;
     padding: 0%;
 }
-.object{
+body{
+    justify-content: center;
+    display: flex;
+}
+.registration{
     justify-content: center;
     margin: 0% auto;
     padding: 0%;
