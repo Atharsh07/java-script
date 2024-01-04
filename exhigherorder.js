@@ -7,7 +7,7 @@ const output = arr.map((x) =>  x*2);
 const output2 = arr.map((x) =>x*3);
 const output3 = arr.map( (x) =>x.toString(2));
 const output4 = arr.filter((x) => x % 2);
-console.log(arr);
+console.log(arr, "", "the array");
 console.log(output, "the value have been doubled");
 console.log(output2, "the value have been tripled");
 console.log(output3, "the value of arr in binary");
@@ -60,3 +60,34 @@ const output6 = arr.reduce(function(acc, cur){
 }, 0);
 
 console.log(output6, "largest of the number using reduce higher order function");
+
+//complicated arr with real world objects 
+
+const users = [
+    {firstName:"atharsh", lastName:"kumar", age:"19"},
+    {firstName:"sai", lastName:"karthick", age:"18"},
+    {firstName:"akilan", lastName:"kumar", age:"18"},
+    {firstName:"balaji", lastName:"baji", age:"50"},
+    {firstName:"Hi", lastName:"bye", age:"50"},
+    {firstName:"pritivi", lastName:"khant", age:"50"},
+    {firstName:"boo", lastName:"shit", age:"7"},
+];
+//list of full names
+
+const out = users.map(x => x.firstName + " " + x.lastName);
+console.log(out,"List of all names");
+
+/*Now the most complicatied thing is that we have to sort out that how many members are present in the
+particular age category */
+//We can do it using reduce :----
+
+const out2 = users.reduce(function(acc, cur){
+    if(acc[cur.age]){
+        acc[cur.age] = ++ acc[cur.age];
+    }
+    else{
+        acc[cur.age] = 1;
+    }
+    return acc;
+},{})
+console.log(out2, "list of age category");
