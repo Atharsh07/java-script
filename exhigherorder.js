@@ -91,3 +91,18 @@ const out2 = users.reduce(function(acc, cur){
     return acc;
 },{})
 console.log(out2, "list of age category");
+
+// now we need to print that list of first name from the object whoes age are less than 30
+// chaining the filter and the map
+
+const print = users.filter( (x) => x.age < 30)
+.map((x) => x.firstName); // map will work under the output of filter
+console.log(print,"the list first name whoes age is less than 30");
+
+const print2 = users.reduce(function(names, user){
+    if(user.age<30){
+        names.push(user.firstName)//can also use acc.unlist(cur.firstName);
+    }
+    return names;
+}, [])//it's initial value and we want the result in the form of an array (names), not the object.
+console.log(print2,"the list frist name whoes age is leass than 30 using reduce");
