@@ -106,3 +106,4 @@ const print2 = users.reduce(function(names, user){
     return names;
 }, [])//it's initial value and we want the result in the form of an array (names), not the object.
 console.log(print2,"the list frist name whoes age is leass than 30 using reduce");
+//...........................................ends...........................//

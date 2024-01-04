@@ -1,4 +1,4 @@
-/*
+
 function x(){
     var a = 7;
     function y(){
@@ -12,11 +12,11 @@ console.log(z);
 
 z();
 //... so this is called clouser how this works 
-*/
+
 
 
 //... settimeout concept :----
-/*
+
 function x(){
     var i =1; 
     setTimeout(() => {
@@ -33,12 +33,12 @@ function x(){
 }
 x();
 console.log("Atharsh");
-*/
+
 
 //.. most asked intreview qt js..
 //.. print in console that 1 2 .. 5 after each of its time interval 
 
-/*
+
 function x(){
     for(let i=1; i<=6; i++) {
         setTimeout(function(){
@@ -49,9 +49,9 @@ function x(){
 x();
 console.log("atharsh");
 
-*/
+
 //this is the qt where we need to use var only not the let function --->
-/*
+
 function x(){
     for(var i = 1; i<=5; i++){
         function close(i){
@@ -63,8 +63,8 @@ function x(){
     }
 }
 x()
-*/
-/* how the closur works behind the scene 
+
+// how the closur works behind the scene 
 function outest(){
     var c = 20;
     function outer(b){
@@ -76,14 +76,14 @@ function outest(){
     }
     return outer;
 }
-let a = 100;
+let b = 100;
 var close = outest()("atharsh");
 close();
-*/
+
 
 
 // data hiding and encapsulation (closur):----
-/*
+
 function counter(){
     let count = 1;
     return function incrementCounter(){
@@ -93,9 +93,9 @@ function counter(){
 }
 var counter1 = counter();
 counter1();
-*/
+
 //.... contructive function
-/*
+
 function Counter(){
     let count = 0;
     this.incrementCounter = function(){
@@ -112,7 +112,7 @@ counter1.incrementCounter();
 counter1.incrementCounter();
 counter1.decrementCounter();
 counter1.decrementCounter();
-*/
+
 var a = function (parm){
     return function b(){
         console.log("hi");
