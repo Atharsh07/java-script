@@ -1,6 +1,6 @@
 //.. Map[], reduce[], filter[] are higher order functions in js 
 
-const arr =[5, 1, 3, 2, 6];
+const arr =[7, 1, 3, 8, 6];
 
 // double the value
 const output = arr.map((x) =>  x*2);
@@ -25,11 +25,38 @@ function Findsum(arr){
     }
     return sum;
 }
-console.log(Findsum(arr));
+console.log(Findsum(arr), "the sum of the number using traditional way");
 
 //using reduce function 
 
 const output5 = arr.reduce(function(acc, cur){
     acc = acc + cur;
-}, 0)
-console.log(Findsum(arr)); // compare the both functions in this 
+    return acc;
+}, 0);
+console.log(output5, "sum of the number using reduce higher order function"); // compare the both functions in this 
+
+// max value normal way 
+
+function maxvalue(arr){
+    max = 0;
+    for(let i = 0; i<arr.length; i++){
+        if(arr[i]>max){
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log(maxvalue(arr),"largest of the number using traditional way");
+
+// max value of the function using reduce way :----
+
+const output6 = arr.reduce(function(acc, cur){
+    for(let i = 0; i<arr.length; i++){
+        if(cur>acc){
+            acc = cur;
+        }
+    }
+    return acc;
+}, 0);
+
+console.log(output6, "largest of the number using reduce higher order function");
