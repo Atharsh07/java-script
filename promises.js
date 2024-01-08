@@ -1,4 +1,5 @@
 // promises are used to handle asyn operations in js 
+
 let p = new Promise((resolve, reject) => {
     console.log("Promise is pending")
     setTimeout(() => {
@@ -30,3 +31,26 @@ let promise2 = new Promise((resolve, reject) => {
 })
 console.log(promise2);
 
+
+// then() and catch()
+
+let p1 = new Promise((resolve, reject) => {
+    console.log("promise is pending")
+    setTimeout(() => {
+        resolve(true);
+    }, 5000)
+})
+let p2 = new Promise((resolve, reject) => {
+    console.log("promise is pending")
+    setTimeout(() => {
+        reject(new Error("i am an error")); // it throw an error in console box
+    }, 5000)
+})
+
+p1.then((value) => {
+    console.log(value);
+})
+
+p2.catch((error) => {                            //  it catchs the error
+    console.log("some error occurd");
+})
